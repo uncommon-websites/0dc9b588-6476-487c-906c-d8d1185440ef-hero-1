@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gospel Broadcasting Network | Unbiased Biblical Resources</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.97); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .animate-fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-scale-in {
+            opacity: 0;
+            animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .delay-0 { animation-delay: 0ms; }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+
+        .text-balance { text-wrap: balance; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animate-fade-in-up, .animate-fade-in, .animate-scale-in {
+                animation: none;
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-black text-white overflow-x-hidden selection:bg-white selection:text-black">
+
+    <div class="relative min-h-screen w-full flex flex-col">
+        
+        <!-- Background Image with Overlays -->
+        <div class="absolute inset-0 z-0 overflow-hidden bg-black">
+            <img 
+                src="https://imolwncbqxugevwmleed.supabase.co/storage/v1/object/public/public-assets/hero-images/0dc9b588-6476-487c-906c-d8d1185440ef/hero-1-img-0-1777060530159.png" 
+                alt="Global connectivity map representing truth across the world" 
+                class="w-full h-full object-cover object-center opacity-50 animate-scale-in delay-0"
+            />
+            <!-- Gradient overlay to ensure text readability and match the moody tone -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/50 to-black animate-fade-in delay-100"></div>
+        </div>
+
+        <!-- Header / Navigation -->
+        <header class="relative z-10 w-full px-6 md:px-12 lg:px-16 py-8 flex justify-between items-center animate-fade-in delay-100">
+            <!-- Logo -->
+            <a href="#" class="flex items-center hover:opacity-80 transition-opacity duration-200 gap-3" aria-label="Home">
+                <div class="w-10 h-10 bg-white flex items-center justify-center rounded">
+                    <span class="text-black font-black text-xl">G</span>
+                </div>
+                <span class="text-xl font-bold tracking-tight">GBN</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="flex items-center gap-8 md:gap-12 text-sm md:text-base font-medium">
+                <a href="#" class="hover:opacity-70 transition-opacity duration-200">Watch Live 24/7</a>
+                <a href="#" class="hover:opacity-70 transition-opacity duration-200">Digital Library</a>
+                <a href="#" class="bg-white text-black px-6 py-2 rounded-full font-semibold hover:opacity-90 active:scale-[0.97] transition-all duration-200">Support GBN</a>
+            </nav>
+        </header>
+
+        <!-- Main Hero Content -->
+        <main class="relative z-10 flex-grow flex flex-col justify-end pb-12 md:pb-16 lg:pb-24 px-6 md:px-12 lg:px-16">
+            <div class="w-full max-w-[1400px] mx-auto">
+                <h1 class="text-[4.5rem] sm:text-[6rem] md:text-[8rem] lg:text-[140px] xl:text-[160px] leading-[0.85] font-medium tracking-[-0.05em] text-white animate-fade-in-up delay-200 text-balance">
+                    Truth for the<br />
+                    Whole World.
+                </h1>
+            </div>
+        </main>
+
+    </div>
+
+</body>
+</html>
